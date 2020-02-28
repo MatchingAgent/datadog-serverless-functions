@@ -346,10 +346,6 @@ Resources:
         Statement:
         - Effect: Allow
           Action:
-            - s3:GetObject
-          Resource: 'arn:aws:s3:::*'
-        - Effect: Allow
-          Action:
             - secretsmanager:GetSecretValue
           Resource:
             Ref: DdApiKeySecret

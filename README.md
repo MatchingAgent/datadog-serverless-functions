@@ -12,9 +12,10 @@ Datadog Forwarder Lambdaに設定されるIAMポリシー
 ```
 を削除して使用しています
 
-# datadog-serverless-functions
+## 運用
+### リソースの作成
+[aws/logs_monitoring/template.yaml](https://github.com/MatchingAgent/datadog-serverless-functions/blob/master/aws/logs_monitoring/template.yaml)をAWSコンソールからCloudFormationに入力してリソースの作成を行いました  
 
-This repository contains our serverless functions that process streams and send data to datadog
-
-- For AWS, [go here](./aws/README.md)
-- For Azure, [go here](./azure/README.md)
+### Fowarder Lambdaのトリガーの設定
+作成さた `tapple-datadog-forwarder-Forwarder` というLambdaにAWSコンソールからトリガーの追加を行っています  
+subscribeするCloudWatch Log Groupを追加したい場合はコンソールから設定してください  
